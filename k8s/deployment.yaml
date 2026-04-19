@@ -15,5 +15,6 @@ spec:
       containers:
       - name: my-app
         image: srivarshinir/my-app:latest
+        imagePullPolicy: Always   # 🔥 ADD THIS
         ports:
         - containerPort: 3000
