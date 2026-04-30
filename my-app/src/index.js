@@ -6,125 +6,57 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>CI/CD Pipeline Visual</title>
+        <title>CI/CD Pipeline</title>
         <style>
             body {
-                margin: 0;
-                font-family: 'Segoe UI', sans-serif;
-                background: linear-gradient(135deg, #0f172a, #1e293b);
+                font-family: Arial;
+                background: #0f172a;
                 color: white;
                 text-align: center;
+                padding: 40px;
             }
-
             h1 {
-                margin-top: 30px;
                 color: #38bdf8;
             }
-
-            .container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                margin: 40px auto;
-                width: 90%;
-            }
-
-            .step {
+            .box {
                 background: #1e293b;
-                border-radius: 15px;
-                padding: 20px;
-                margin: 15px;
-                width: 180px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-                transition: transform 0.3s;
-            }
-
-            .step:hover {
-                transform: scale(1.08);
-            }
-
-            .step img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .step p {
-                margin-top: 10px;
-                font-size: 16px;
-            }
-
-            .arrow {
-                font-size: 30px;
-                margin: 10px;
-                color: #38bdf8;
-            }
-
-            footer {
-                margin-top: 30px;
+                margin: 15px auto;
+                padding: 15px;
+                width: 70%;
+                border-radius: 10px;
                 font-size: 18px;
-                color: #94a3b8;
+            }
+            .arrow {
+                font-size: 22px;
+                margin: 8px;
             }
         </style>
     </head>
     <body>
 
-        <h1>🚀 CI/CD Pipeline Visualization</h1>
+        <h1>🚀 CI/CD Pipeline Flow in Devops</h1>
 
-        <div class="container">
+        <div class="box">👩‍💻 Developer (Code Changes)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
-                <p>Developer</p>
-            </div>
+        <div class="box">📂 GitHub (Code Repository)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="arrow">➡️</div>
+        <div class="box">⚙️ Jenkins (Build & Pipeline)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
-                <p>GitHub</p>
-            </div>
+        <div class="box">🐳 Docker (Build Image)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="arrow">➡️</div>
+        <div class="box">☁️ Docker Hub (Store Image)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png">
-                <p>Jenkins</p>
-            </div>
+        <div class="box">☸️ Kubernetes (Deploy Application)</div>
+        <div class="arrow">⬇️</div>
 
-            <div class="arrow">➡️</div>
+        <div class="box">🌐 Browser (Live App)</div>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png">
-                <p>Docker</p>
-            </div>
-
-            <div class="arrow">➡️</div>
-
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png">
-                <p>Docker Hub</p>
-            </div>
-
-            <div class="arrow">➡️</div>
-
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png">
-                <p>Kubernetes</p>
-            </div>
-
-            <div class="arrow">➡️</div>
-
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
-                <p>Live App</p>
-            </div>
-
-        </div>
-
-        <footer>
-            ✅ Code → Build → Test → Deploy → Live (Fully Automated)
-        </footer>
+        <h3>✅ Code → Build → Deploy → Live automatically</h3>
 
     </body>
     </html>
@@ -132,5 +64,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+    console.log("Server running on port 3000");
 });
